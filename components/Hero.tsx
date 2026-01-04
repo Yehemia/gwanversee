@@ -6,7 +6,10 @@ import ScrollVelocity from "@/components/animations/ScrollVelocity";
 
 const Hero = () => {
   return (
-    <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 md:px-24">
+    <section
+      id="hero"
+      className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 md:px-24"
+    >
       {/* Hero Content */}
       <div className="flex flex-col items-center justify-center text-center z-10 space-y-8 max-w-4xl py-20">
         <div className="relative">
@@ -42,17 +45,20 @@ const Hero = () => {
           >
             Contact Me
           </Link>
+          {/* Scroll Velocity */}
+          <div className="absolute bottom-0 left-0 w-full z-10 overflow-hidden pointer-events-none translate-y-38">
+            <ScrollVelocity
+              texts={[
+                "Next.js • React • Flutter • Dart •",
+                "Frontend • Mobile • UI Engineering •",
+              ]}
+              velocity={50}
+              className="text-white/50 hover:text-white transition-colors cursor-default"
+            />
+          </div>
         </div>
       </div>
-
-      {/* Scroll Velocity */}
-      <div className="absolute bottom-0 left-0 w-full z-10 overflow-hidden pointer-events-none">
-        <ScrollVelocity
-          texts={["Next.js • React • Flutter • Dart •"]}
-          velocity={50}
-        />
-      </div>
-    </div>
+    </section>
   );
 };
 

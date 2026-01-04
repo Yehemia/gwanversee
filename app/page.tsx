@@ -30,9 +30,7 @@ export default function Home() {
       <div className="fixed inset-0 z-0 h-screen w-screen">
         <LiquidEther />
       </div>
-      <main>
-        <Hero />
-      </main>
+      <Hero />
       <About />
     </>
   );
