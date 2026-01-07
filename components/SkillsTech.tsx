@@ -2,6 +2,13 @@
 
 import React, { useState } from "react";
 import useSWR from "swr";
+import { VscVscode } from "react-icons/vsc";
+import { 
+  FaLayerGroup, 
+  FaJava, 
+  FaDiagramProject, 
+  FaSitemap,
+  FaDatabase } from "react-icons/fa6";
 import {
   SiReact,
   SiNextdotjs,
@@ -27,6 +34,7 @@ import {
   SiFlask,
   SiSvelte,
   SiBootstrap,
+  SiJavascript,
 } from "react-icons/si";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -57,6 +65,20 @@ const SkillsTech = () => {
 
   const skills = [
     {
+      name: "Javascripts",
+      icon: SiJavascript,
+      category: "Frontend",
+      color: "#F7DF1E",
+      desc: "Language",
+    },
+    {
+      name: "Typescript",
+      icon: SiTypescript,
+      category: "Frontend",
+      color: "#3178C6",
+      desc: "Language",
+    },
+    {
       name: "React",
       icon: SiReact,
       category: "Frontend",
@@ -68,14 +90,14 @@ const SkillsTech = () => {
       icon: SiNextdotjs,
       category: "Frontend",
       color: "#ffffff",
-      desc: "React Framework",
+      desc: "Framework",
     },
     {
       name: "Svelte",
       icon: SiSvelte,
       category: "Frontend",
       color: "#FF3E00",
-      desc: "JS Framework",
+      desc: "Framework",
     }, // Using Vite as placeholder/generic or import Svelte if available
     {
       name: "Tailwind CSS",
@@ -96,7 +118,7 @@ const SkillsTech = () => {
       icon: SiFlutter,
       category: "Mobile",
       color: "#02569B",
-      desc: "UI Toolkit",
+      desc: "Framework",
     },
     {
       name: "Dart",
@@ -104,26 +126,12 @@ const SkillsTech = () => {
       category: "Mobile",
       color: "#0175C2",
       desc: "Language",
-    },
-    {
-      name: "Hive",
-      icon: SiFirebase,
-      category: "Mobile",
-      color: "#FFCA28",
-      desc: "NoSQL DB",
-    }, // Placeholder icon
-    {
-      name: "Provider",
-      icon: SiFlutter,
-      category: "Mobile",
-      color: "#00ADD8",
-      desc: "State Mgmt",
     }, // Placeholder icon
     {
       name: "Java",
-      icon: SiVite,
+      icon: FaJava,
       category: "Backend",
-      color: "#007396",
+      color: "#FF0000",
       desc: "Language",
     }, // Placeholder
     {
@@ -138,7 +146,7 @@ const SkillsTech = () => {
       icon: SiFlask,
       category: "Backend",
       color: "",
-      desc: "Microframework",
+      desc: "Framework",
     }, // Placeholder
     {
       name: "MySQL",
@@ -156,14 +164,14 @@ const SkillsTech = () => {
     },
     {
       name: "JavaFX",
-      icon: SiVite,
+      icon: FaJava,
       category: "Desktop",
       color: "#007396",
       desc: "GUI Framework",
     }, // Placeholder
     {
       name: "OOP",
-      icon: SiVite,
+      icon: FaSitemap,
       category: "Architecture",
       color: "#00ADD8",
       desc: "Paradigm",
@@ -177,21 +185,21 @@ const SkillsTech = () => {
     }, // Placeholder
     {
       name: "DB Design",
-      icon: SiPostgresql,
+      icon: FaDatabase,
       category: "Architecture",
       color: "#4479A1",
       desc: "Schema Design",
     }, // Placeholder
     {
       name: "MVC",
-      icon: SiVite,
+      icon: FaDiagramProject,
       category: "Architecture",
       color: "#00ADD8",
       desc: "Pattern",
     }, // Placeholder
     {
       name: "Layered Arch",
-      icon: SiVite,
+      icon: FaLayerGroup,
       category: "Architecture",
       color: "#00ADD8",
       desc: "Pattern",
@@ -207,12 +215,12 @@ const SkillsTech = () => {
       name: "GitHub",
       icon: SiGithub,
       category: "Tools",
-      color: "#02569B",
+      color: "",
       desc: "Hosting",
     }, // Reuse Git icon or specific Github
     {
       name: "VS Code",
-      icon: SiVite,
+      icon: VscVscode,
       category: "Tools",
       color: "#007ACC",
       desc: "IDE",
@@ -258,7 +266,7 @@ const SkillsTech = () => {
         <div className="flex items-center justify-between mb-8 relative z-10">
           <div className="flex items-center gap-4">
             <div className="p-3 bg-white/5 rounded-xl">
-              <SiGit className="w-6 h-6 text-cyan-400" />
+              <SiGit className="w-6 h-6 text-orange-600" />
             </div>
             <div>
               <h3 className="text-xl font-bold text-white">
